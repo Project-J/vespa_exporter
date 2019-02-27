@@ -13,5 +13,6 @@ COPY requirements.txt /app/
 RUN /env/bin/pip3 install -r requirements.txt
 
 COPY vespa-exporter.py /app/
+COPY whitelist.txt /app/
 
 CMD ["/env/bin/python3", "/app/vespa-exporter.py"]
